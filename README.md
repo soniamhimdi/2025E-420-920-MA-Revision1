@@ -15,12 +15,12 @@ programme.
 
 ## Énoncé
 
-### Séance 1 : Comprendre le code existant et l'améliorer
+### Séance 1 : Comprendre le code existant et l'améliorer (3h)
 
 Dans un premier temps, vous devez comprendre le code existant. Voici les étapes à suivre :
 
 1. Faire une duplication (fork) de ce dépôt dans votre compte GitHub.
-2. Cloner le dépôt sur votre machine locale.
+2. Cloner votre duplication (fork) sur votre machine locale.
 3. Exécuter le code pour voir comment il fonctionne (`uv run piledger`)
 4. Lire le code existant pour comprendre son fonctionnement.
 
@@ -36,7 +36,7 @@ faire ces améliorations dans l'ordre que vous souhaitez.
 - Utiliser des exceptions pour gérer les erreurs (par exemple, lors de la lecture
   d'un fichier).
 - Améliorer la lecture du fichier CSV en utilisant le module `csv` de la bibliothèque
-  standard. Même chose pour l'exportation des transactions.
+  standard. Même chose pour l'exportation des écritures d'un compte.
 - Simplifier les boucles et les conditions pour les rendre plus lisibles.
 - Ajouter les annotations de types.
 - Tout autre amélioration que vous jugez pertinente.
@@ -45,16 +45,24 @@ faire ces améliorations dans l'ordre que vous souhaitez.
 
 ### Séance 2 : Révision par les pairs
 
-#### Révision par les pairs (1h30)
+#### Révision par les pairs (environ 1h30)
 
 En groupe de 5, vous devez faire une révision des PR des autres membres de votre groupe. Voici les étapes à suivre :
 
 1. Cloner le dépôt de votre collègue sur votre machine locale ou lire le code en ligne.
 2. Laisser des commentaires constructifs sur la PR de votre collègue.
 
-#### Correction de la PR (1h30)
+#### Correction de la PR (environ 1h30)
 
 Par la suite, chaque membre doit corriger sa propre PR en fonction des
 commentaires reçus. Vous pouvez choisir d'implémenter ou non les suggestions
 faites par vos collègues, mais vous devez formuler une réponse dans les
 commentaires de la PR pour expliquer vos choix.
+
+Lorsque vous modifiez votre code dans la branche utilisée pour la pull request,
+celle-ci sera automatiquement mise à jour.
+
+## Retour par l'enseignant
+
+Après la séance 2, je vais réviser les PR et faire un retour en classe lors du
+prochain cours.
