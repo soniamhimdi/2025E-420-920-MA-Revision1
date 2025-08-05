@@ -1,2 +1,4 @@
+import piledger.main as piledger
+
 def main() -> None:
-    print("Hello from piledger!")
+    piledger.main()
