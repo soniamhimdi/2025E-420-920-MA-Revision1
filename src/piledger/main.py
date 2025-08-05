@@ -153,7 +153,7 @@ def find_total_expenses(data):
         i += 1
     return total
 
-def export_account_transactions(data, account_name, filename):
+def export_account_postings(data, account_name, filename):
     file = open(filename, 'w', encoding='utf-8')
     file.write("No txn,Date,Compte,Montant,Commentaire\n")
     i = 0
@@ -164,7 +164,7 @@ def export_account_transactions(data, account_name, filename):
             file.write(line)
         i += 1
     file.close()
-    print(f"Transactions exportées vers {filename}")
+    print(f"Écritures exportées vers {filename}")
 
 def validate_account_name(accounts, account_name):
     i = 0
@@ -183,7 +183,7 @@ def display_menu():
     print("3. Afficher les transactions d'un compte")
     print("4. Afficher le résumé de tous les comptes")
     print("5. Afficher les statistiques")
-    print("6. Exporter les transactions d'un compte")
+    print("6. Exporter les écritures d'un compte")
     print("7. Rechercher par période")
     print("0. Quitter")
     print("="*50)
@@ -253,7 +253,7 @@ def handle_date_search(data):
     if len(filtered_data) == 0:
         print(f"Aucune transaction trouvée entre {start_date} et {end_date}")
     else:
-        print(f"\n{len(filtered_data)} transaction(s) trouvée(s) entre {start_date} et {end_date}:")
+        print(f"\n{len(filtered_data)} écritures(s) trouvée(s) entre {start_date} et {end_date}:")
         i = 0
         while i < len(filtered_data):
             transaction = filtered_data[i]
@@ -281,7 +281,7 @@ def handle_export(data, accounts):
         if not filename:
             filename = f"export_{validated_account.replace(' ', '_').lower()}.csv"
         
-        export_account_transactions(data, validated_account, filename)
+        export_account_postings(data, validated_account, filename)
     else:
         print(f"Compte '{account_input}' introuvable!")
 
